@@ -182,11 +182,29 @@ alias ll='ls -lA'
 ################################################################################
 
 _bh_prepend_path $HOME/.local/bin
+_bh_prepend_path $HOME/.local/share/go/bin
 
 
 ################################################################################
 # Other Cleanup
 ################################################################################
 
-export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+
+export VIMINIT='if !has("nvim") | let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | else | let $MYVIMRC="$XDG_CONFIG_HOME/nvim/init.lua" | endif | source $MYVIMRC'
+
+
+################################################################################
+# JetBrains Toolbox
+################################################################################
+
+_bh_append_path "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+
+
+################################################################################
+# SDKMAN
+################################################################################
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 

@@ -1,4 +1,6 @@
-set nu
+set number
+set scrolloff 4
+set splitright
 
 " XDG Stuff https://wiki.archlinux.org/title/XDG_Base_Directory
 set runtimepath^=$XDG_CONFIG_HOME/vim
@@ -16,4 +18,4 @@ set directory=$XDG_STATE_HOME/vim/swap   | call mkdir(&directory, 'p')
 set undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&undodir,   'p')
 set viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&viewdir,   'p')
 
-if !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif
+" if !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif
