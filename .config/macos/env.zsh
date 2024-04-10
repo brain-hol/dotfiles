@@ -22,3 +22,6 @@
 /bin/launchctl setenv XDG_STATE_HOME "$HOME/.local/state"
 
 /bin/launchctl setenv ZDOTDIR "$HOME/.config/zsh"
+/bin/launchctl setenv NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npm/npmrc"
+/bin/launchctl setenv DOCKER_CONFIG "$XDG_CONFIG_HOME/docker"
+
