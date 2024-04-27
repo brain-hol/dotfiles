@@ -8,14 +8,6 @@ SAVEHIST=1000000 # In file
 
 
 ################################################################################
-# ZSH Settings
-################################################################################
-
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-autoload -Uz compinit && compinit -d $CACHE_HOME/zcompdump
-
-
-################################################################################
 # Util Functions
 ################################################################################
 function _bh_printerr() {
@@ -149,4 +141,8 @@ if [[ -d "${bh_conf_d_dir}" ]]; then
         fi
     done
 fi
+
+# Do autocomplete loading at the end so that individual files can add to fpath
+ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+ autoload -Uz compinit && compinit -d $CACHE_HOME/zcompdump
 
