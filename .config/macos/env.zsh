@@ -21,7 +21,9 @@
 /bin/launchctl setenv XDG_DATA_HOME "$HOME/.local/share"
 /bin/launchctl setenv XDG_STATE_HOME "$HOME/.local/state"
 
+# You can't use variables declared with launchctl because they only take effect
+# with processes spawned after they are set which this file is not.
 /bin/launchctl setenv ZDOTDIR "$HOME/.config/zsh"
-/bin/launchctl setenv NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npm/npmrc"
-/bin/launchctl setenv DOCKER_CONFIG "$XDG_CONFIG_HOME/docker"
+/bin/launchctl setenv NPM_CONFIG_USERCONFIG "$HOME/.config/npm/npmrc"
+/bin/launchctl setenv DOCKER_CONFIG "$HOME/.config/docker"
 
