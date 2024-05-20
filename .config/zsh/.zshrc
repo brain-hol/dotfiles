@@ -121,15 +121,6 @@ _bh_prepend_path $HOME/.local/bin
 # _bh_append_path "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
 
-################################################################################
-# disable SDKMAN
-################################################################################
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# export SDKMAN_DIR="$HOME/.sdkman"
-# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-
 # Source every symlink or file in conf.d
 # See https://zsh.sourceforge.io/Doc/Release/Expansion.html#Glob-Qualifiers about the for loop glob
 bh_conf_d_dir="${XDG_CONFIG_HOME}/zsh/conf.d"
@@ -144,5 +135,5 @@ fi
 
 # Do autocomplete loading at the end so that individual files can add to fpath
  zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
- autoload -Uz compinit && compinit -d $CACHE_HOME/zcompdump
+ autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zcompdump
 
