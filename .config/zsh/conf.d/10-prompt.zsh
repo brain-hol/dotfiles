@@ -29,7 +29,7 @@ preexec() {
     fi
 }
 
-PATH_SECTION='%F{blue}%3d%f'
+PATH_SECTION='%F{blue}%5d%f'
 ERROR_SECTION='%(?.. | %F{red}%?%f)'
 
 PS1="%B[ ${PATH_SECTION}\$(_vcs_info_wrapper)${ERROR_SECTION} ]
