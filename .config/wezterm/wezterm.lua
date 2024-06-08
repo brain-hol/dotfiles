@@ -18,4 +18,14 @@ config.window_padding = {
 config.font_size = 14
 config.window_close_confirmation = "NeverPrompt"
 
+config.native_macos_fullscreen_mode = true
+
+config.keys = {
+    {
+        key = "f",
+        mods = "CMD|CTRL",
+        action = wezterm.action.ToggleFullScreen,
+    },
+}
+
 return config
