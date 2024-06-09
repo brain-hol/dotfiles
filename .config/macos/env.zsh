@@ -25,5 +25,7 @@
 # with processes spawned after they are set which this file is not.
 /bin/launchctl setenv ZDOTDIR "$HOME/.config/zsh"
 /bin/launchctl setenv NPM_CONFIG_USERCONFIG "$HOME/.config/npm/npmrc"
-/bin/launchctl setenv DOCKER_CONFIG "$HOME/.config/docker"
+
+# This seems to also add more things that config (state, contexts)
+# /bin/launchctl setenv DOCKER_CONFIG "$HOME/.config/docker"
 
