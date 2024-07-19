@@ -104,7 +104,7 @@ function _bh_append_path() {
 ################################################################################
 
 alias ll='ls -la'
-alias dots='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv'
+alias dots='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME $argv'
 
 
 ################################################################################
