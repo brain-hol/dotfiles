@@ -6,8 +6,8 @@ config.color_scheme = "nord"
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
-config.initial_cols = 120
-config.initial_rows = 36
+config.initial_cols = 100
+config.initial_rows = 30
 config.quit_when_all_windows_are_closed = false
 config.window_padding = {
     left = 0,
