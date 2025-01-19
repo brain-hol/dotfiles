@@ -17,6 +17,7 @@ return {
       servers = {
         lua_ls = {},
         denols = {},
+        zls = {},
       },
     },
     config = function(_, opts)
