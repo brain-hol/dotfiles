@@ -1,6 +1,7 @@
 [user]
     name = Brian Holderness
-    email = brian@holderness.net
+    email = 46637194+brain-hol@users.noreply.github.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQuezml9RSL99BCoEOEIYH+NE2EAXv9yNO7Lih2WIQs
 
 [core]
     autocrlf = input
@@ -10,8 +11,7 @@
     defaultBranch = main
 
 [alias]
-    s = status -sb
-
+    s = !"git status -s --branch && git stash list"
     lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
     lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
     lg1 = !"git lg1-specific"
@@ -19,5 +19,18 @@
     lg = !"git lg1"
     lga = !"git lg --all"
 
+    wip = !"git add --all && git commit -m 'wip'"
+    pushup = !"git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+
 [includeIf "gitdir:~/Work/"]
     path = ~/Work/.gitconfig
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+    allowedSignersFile = /Users/brian/.ssh/allowed_signers
+
+[commit]
+    gpgsign = true
