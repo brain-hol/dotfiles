@@ -12,14 +12,13 @@ vim.opt.scrolloff = 10
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.number = true
-vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 vim.opt.list = true
 vim.opt.listchars = { tab = "⇥ ", trail = "·", nbsp = "␣" }
 -- vim.opt.listchars = { tab = "⇥ ", trail = "·", nbsp = "␣", eol = "↵" }
--- vim.opt.inccommand = 'split' -- Opens a split window when doing commands like :%s//
+vim.opt.inccommand = 'split' -- Opens a split window when doing commands like :%s//
 vim.opt.cursorline = true
 vim.opt.tabstop = 4
 
