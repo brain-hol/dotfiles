@@ -22,15 +22,14 @@
     wip = !"git add --all && git commit -m 'wip'"
     pushup = !"git push -u origin $(git rev-parse --abbrev-ref HEAD)"
 
-[includeIf "gitdir:~/Work/"]
-    path = ~/Work/.gitconfig
-
 [gpg]
     format = ssh
 
-[gpg "ssh"]
-    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-    allowedSignersFile = /Users/brian/.ssh/allowed_signers
-
 [commit]
     gpgsign = true
+
+[includeIf "gitdir:/Users/**"]
+    path = ~/.config/git/config-macos
+
+[includeIf "gitdir:/home/**"]
+    path = ~/.config/git/config-linux
