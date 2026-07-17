@@ -2,14 +2,14 @@
 
 # Remap the Caps Lock key to Control
 # See https://hidutil-generator.netlify.app
-/usr/bin/hidutil property --set '{
-    "UserKeyMapping": [
-        {
-            "HIDKeyboardModifierMappingSrc": 0x700000039,
-            "HIDKeyboardModifierMappingDst": 0x7000000E4
-	}
-    ]
-}'
+# /usr/bin/hidutil property --set '{
+#     "UserKeyMapping": [
+#         {
+# "HIDKeyboardModifierMappingSrc": 0x700000039,
+#             "HIDKeyboardModifierMappingDst": 0x7000000E4
+# 	}
+#     ]
+# }'
 
 # This can't be in .zshrc because it needs to be set before `/etc/zhsrc` is run.
 # Otherwise Apple starts saving `.zsh_sessions`.
