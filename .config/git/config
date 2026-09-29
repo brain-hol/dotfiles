@@ -33,3 +33,6 @@
 
 [includeIf "gitdir:/home/**"]
     path = ~/.config/git/config-linux
+
+[includeIf "gitdir:~/Work/"]
+    path = ~/Work/.gitconfig
