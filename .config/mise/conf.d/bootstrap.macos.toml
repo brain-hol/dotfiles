@@ -1,0 +1,80 @@
+[bootstrap.directories."~/Source"]
+ 
+[bootstrap.directories."~/Scratch"]
+ 
+[bootstrap.packages]
+"brew:fish" = "latest"
+"brew:neovim" = "latest"
+"brew:stow" = "latest"
+"brew:tree" = "latest"
+# Casks
+"brew-cask:ghostty" = "latest"
+"brew-cask:google-chrome" = "latest"
+"brew-cask:raycast" = "latest"
+"brew-cask:tailscale-app" = "latest"
+"brew-cask:zed" = "latest"
+# "brew-cask:rectangle" = "latest" # Potentially just using macos built in
+"brew-cask:postman" = "latest"
+"brew-cask:utm" = "latest"
+# "brew-cask:steam" = "latest" # Broken for some reason
+"brew-cask:viscosity" = "latest"
+"brew-cask:spotify" = "latest"
+"brew-cask:scroll-reverser" = "latest"
+ 
+[bootstrap.macos.dock]
+autohide = true
+show_recents = false
+tilesize = 42
+ 
+[bootstrap.macos.trackpad]
+tap_to_click = true
+three_finger_drag = true
+ 
+[bootstrap.macos.keyboard]
+key_repeat = 2
+initial_key_repeat = 15
+press_and_hold = false
+ 
+[bootstrap.macos.finder]
+preferred_view_style = "list"
+show_all_files = true
+show_extensions_warning = false
+show_status_bar = true
+show_pathbar = true
+ 
+[bootstrap.macos.defaults]
+"com.apple.WindowManager" = {
+  StandardHideWidgets = true,
+  StageManagerHideWidgets = true,
+  EnableStandardClickToShowDesktop = false,
+}
+"com.apple.AppleMultitouchTrackpad" = {
+  FirstClickThreshold = 0,
+  SecondClickThreshold = 0,
+}
+"NSGlobalDomain" = {
+  "com.apple.trackpad.scaling" = 1.5,
+  # Keyboard Navigation Enabled
+  "AppleKeyboardUIMode" = 2,
+}
+"com.apple.dock" = {
+  mineffect = "scale",
+  position-immutable = true,
+  size-immutable = true,
+  # Make Dock icons of hidden applications translucent
+  showhidden = true,
+  autohide-delay = 0,
+  # Disable quick note hot corner
+  wvous-br-corner = 1,
+}
+"com.apple.finder" = {
+  WarnOnEmptyTrash = false,
+  AppleShowAllExtensions = true,
+  _FXSortFoldersFirst = true,
+  # Default search current folder
+  FXDefaultSearchScope = "SCcf",
+  FXRemoveOldTrashItems = true,
+  NSDocumentSaveNewDocumentsToCloud = false,
+  NewWindowTarget = "Home",
+}
+ 

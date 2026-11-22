@@ -1,0 +1,13 @@
+[env]
+_.path = [
+  "/opt/homebrew/bin",
+  "~/.local/bin",
+]
+
+[settings]
+dotfiles.root = "~/Source/dotfiles"
+
+[dotfiles]
+"~/.config/fish" = {}
+"~/.config/nvim" = {}
+"~/.config/git" = {}
