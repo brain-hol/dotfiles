@@ -1,0 +1,10 @@
+theme = Nord
+
+window-width = 96
+window-height = 30
+
+background-opacity = 0.90
+unfocused-split-opacity = 0.90
+background-blur = macos-glass-regular
+
+keybind = ctrl+enter=unbind
